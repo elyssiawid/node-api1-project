@@ -29,7 +29,7 @@ server.get("/api/users/:id", (req, res) => {
           .status(404)
           .json({ error: "That user ID doesn't exist on this server." });
       } else {
-        res.json(user);
+        res.status(200).json(user);
       }
     })
     .catch(error => {

@@ -15,9 +15,7 @@ function find() {
 }
 
 function findById(id) {
-  return dbase("users")
-    .where({ id: Number(id) })
-    .first();
+  return dbase("users").where({ id: Number(id) });
 }
 
 function insert(user) {
